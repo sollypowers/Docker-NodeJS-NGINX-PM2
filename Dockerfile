@@ -4,11 +4,11 @@ FROM node:10
 WORKDIR /usr/app
 
 # Install PM2 globally
-RUN npm install --global pm2
-
+# RUN npm install --global pm2
+RUN npm install -g npm@10.5.0
 # Credential for real time monitoring PM2 Plus
-ENV PM2_PUBLIC_KEY xxxxx
-ENV PM2_SECRET_KEY xxxxx
+# ENV PM2_PUBLIC_KEY xxxxx
+# ENV PM2_SECRET_KEY xxxxx
 
 
 # Copy "package.json" and "package-lock.json" before other files
